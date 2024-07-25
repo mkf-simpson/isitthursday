@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thursday Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="path/to/your/favicon.png" type="image/png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .message {
+            font-size: 3em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="message" id="message"></div>
+    <script>
+        function checkThursday() {
+            const today = new Date();
+            const messageElement = document.getElementById('message');
+            if (today.getDay() === 4) {
+                messageElement.textContent = "It is Thursday";
+            } else {
+                messageElement.textContent = "It is not Thursday";
+            }
+        }
+        checkThursday();
+    </script>
+</body>
+</html>
